@@ -15,18 +15,17 @@
         pip install requests
         ```
 
-2. Modify the `atompay/views.py` file
+2. Modify the `NTTDATAPAY_django_603/views.py` file
     - Change the configuration details like merchId, password, product etc. in payview method.
     - Configure `authurl` according to UAT and Production environments.
     - This function includes the AUTH api call which will generate an atomtokenid. 
     - In resp(), change the response key provided by NDPS. This method will help to handle the response.
 
-3. Add the `cacert.pem` in atompay directory.
+3. Add the `cacert.pem` in django_603 directory.
 
-4. Modify `atompay/templates/base.html`
+4. Modify `NTTDATAPAY_django_603/templates/base.html`
     - Configure the atomcheckout.js in accordance with UAT and Production environments.
     - openpay() will open the NTT DATA Payment Page.
 
-5. Modify `atompay/templates/response.html`
+5. Modify `NTTDATAPAY_django_603/templates/response.html`
     - response.html is used to get the response details after the transaction is completed.
-
